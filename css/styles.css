@@ -702,7 +702,7 @@ img {
 }
 
 .modal-backdrop.is-hidden {
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
 }
 
