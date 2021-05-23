@@ -22,6 +22,7 @@ body {
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
   letter-spacing: 0.03em;
+  position: relative;
 }
 
 h1,
@@ -674,7 +675,7 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.projects .text {
+.projects .backdrop-text {
   position: absolute;
   top: 63px;
   left: 24px;
@@ -688,4 +689,32 @@ img {
 }
 /* ================END PORTFOLIO================== */
 
-/* ================TEST================== */
+/* ================MODAL WINDOW================== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--primary-white-color);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* ================END WINDOW================== */
