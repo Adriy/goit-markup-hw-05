@@ -186,6 +186,7 @@ img {
 
 .site-nav .link.current {
   color: var(--accent-color);
+  /* padding-bottom: 28px; */
 }
 
 .contacts-nav .cont {
@@ -208,12 +209,13 @@ img {
 
 .line::after {
   position: relative;
+  left: 0;
+  bottom: 0;
   display: block;
   content: '';
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  top: 28px;
   background-color: var(--accent-color);
 }
 /* ================END HEADER================== */
@@ -700,7 +702,7 @@ img {
 }
 
 .modal-backdrop.is-hidden {
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
 }
 
