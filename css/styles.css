@@ -13,6 +13,7 @@
   --button-color-portfolio: #f5f4fa;
   --border-cards: #eeeeee;
   --border-cards-customers: #afb1b8;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ================END ROOT================== */
 
@@ -85,7 +86,7 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function);
 }
 
 .contacts-nav .cont:hover,
@@ -176,7 +177,7 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function);
 }
 
 .site-nav .link + .link {
@@ -215,8 +216,12 @@ img {
   color: var(--accent-color);
 } */
 
-.line::after {
+.link.current {
   position: relative;
+}
+
+.link.current::after {
+  position: absolute;
   left: 0;
   bottom: 0;
   display: block;
@@ -225,7 +230,13 @@ img {
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
+
+  /* opacity: 0; */
 }
+
+/* .link.current:hover::after {
+  opacity: 1;
+} */
 /* ================END HEADER================== */
 
 /* ================HERO================== */
@@ -272,7 +283,7 @@ img {
   padding: 10px 32px;
   border-radius: 4px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .hero .button:hover,
@@ -446,7 +457,7 @@ img {
 .team .social-list-link {
   fill: var(--border-cards-customers);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .team .social-list-link:hover,
@@ -455,7 +466,7 @@ img {
 }
 
 .team .social-list-link:hover .social-list-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--timing-function);
 }
 
 .team .social-list-link:hover .social-list-icon,
@@ -479,7 +490,7 @@ img {
   border-radius: 4px;
   margin-bottom: 0;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms var(--timing-function);
 }
 
 .customers .item:not(:first-child) {
@@ -496,7 +507,7 @@ img {
 }
 
 .customers .link:hover .icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--timing-function);
 }
 
 .customers .link:hover .icon,
@@ -576,7 +587,7 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .footer .social-list-link:hover,
@@ -628,9 +639,9 @@ img {
   line-height: 1.6;
   letter-spacing: inherit;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 .filter .button:hover,
@@ -666,7 +677,7 @@ img {
 }
 
 .projects .flex-element {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .projects .flex-element:hover {
@@ -719,7 +730,7 @@ img {
 }
 
 .flex-element .backdrop {
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms var(--timing-function);
 }
 
 .flex-element:hover .backdrop {
