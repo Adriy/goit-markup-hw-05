@@ -749,7 +749,7 @@ img {
 }
 
 .modal-backdrop.is-hidden {
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
 }
 
@@ -780,4 +780,4 @@ img {
   border-radius: 50%;
 }
 
-/* ================END WINDOW================== */
+/* ================END MODAL WINDOW================== */
