@@ -493,7 +493,7 @@ img {
   border-radius: 4px;
   margin-bottom: 0;
 
-  transition: border 2250ms var(--timing-function);
+  transition: border 250ms var(--timing-function);
 }
 
 .customers .item:not(:first-child) {
@@ -509,15 +509,14 @@ img {
   border: 1px solid var(--accent-color);
 }
 
-.customers .link:hover .icon {
-  transition: fill 250ms var(--timing-function);
-}
-
 .customers .link:hover .icon,
 .customers .link:focus .icon {
   fill: var(--accent-color);
 }
 
+.customers .icon {
+  transition: fill 250ms var(--timing-function);
+}
 /* ================END REGULAR CUSTOMERS================== */
 
 /* ================FOOTER================== */
