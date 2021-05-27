@@ -733,9 +733,7 @@ img {
 }
 
 .projects .backdrop-text {
-  position: absolute;
-  top: 63px;
-  left: 24px;
+  padding: 63px 24px;
   font-size: 18px;
   line-height: 1.55;
   color: var(--primary-white-color);
