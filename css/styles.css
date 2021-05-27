@@ -753,7 +753,8 @@ img {
   z-index: 100;
 
   opacity: 1;
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
 }
 
 .modal-backdrop.is-hidden {
